@@ -1,0 +1,192 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* KaTeX CSS for math and chemistry formula rendering */
+@import 'katex/dist/katex.min.css';
+
+/* Base styles */
+@layer base {
+  html {
+    @apply scroll-smooth;
+  }
+
+  body {
+    @apply text-gray-900 bg-white antialiased;
+  }
+
+  /* Focus styles for accessibility - Requirement 12.3 */
+  /* Ensure visible focus indicator for keyboard navigation */
+  :focus {
+    @apply outline-none;
+  }
+
+  :focus-visible {
+    @apply outline-2 outline-offset-2 outline-blue-600;
+    outline-style: solid;
+  }
+
+  /* High contrast focus for better visibility */
+  a:focus-visible,
+  button:focus-visible,
+  [role="button"]:focus-visible,
+  input:focus-visible,
+  textarea:focus-visible,
+  select:focus-visible {
+    @apply outline-2 outline-offset-2 outline-blue-600;
+    outline-style: solid;
+    box-shadow: 0 0 0 4px rgba(37, 99, 235, 0.25);
+  }
+
+  /* Skip to main content link for screen readers */
+  .skip-link {
+    @apply sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 focus:z-50;
+    @apply focus:px-4 focus:py-2 focus:bg-blue-600 focus:text-white focus:rounded-lg;
+    @apply focus:outline-2 focus:outline-offset-2 focus:outline-white;
+  }
+
+  /* Minimum touch target size for accessibility - Requirement 8.5 */
+  /* Only apply to interactive elements, not all links/buttons */
+  a[href],
+  button,
+  [role="button"],
+  input[type="submit"],
+  input[type="reset"],
+  input[type="button"] {
+    @apply min-h-[44px] min-w-[44px];
+  }
+
+  /* Ensure text selection is visible */
+  ::selection {
+    @apply bg-blue-200 text-gray-900;
+  }
+
+  /* Reduced motion preference - Requirement 12.1 */
+  @media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+      scroll-behavior: auto !important;
+    }
+  }
+}
+
+/* Prose styles for article typography */
+@layer components {
+  .prose {
+    @apply text-gray-800 leading-relaxed;
+  }
+
+  .prose h1 {
+    @apply text-3xl md:text-4xl font-bold mt-8 mb-4 text-gray-900;
+  }
+
+  .prose h2 {
+    @apply text-2xl md:text-3xl font-bold mt-6 mb-3 text-gray-900;
+  }
+
+  .prose h3 {
+    @apply text-xl md:text-2xl font-semibold mt-4 mb-2 text-gray-900;
+  }
+
+  .prose p {
+    @apply my-4 text-base md:text-lg leading-7 md:leading-8;
+  }
+
+  /* Mobile font size requirement - minimum 16px - Requirement 5.9 */
+  .prose p {
+    @apply text-base;
+  }
+
+  .prose a {
+    @apply text-blue-600 hover:text-blue-800 underline transition-colors;
+  }
+
+  .prose ul,
+  .prose ol {
+    @apply my-4 pl-6;
+  }
+
+  .prose ul {
+    @apply list-disc;
+  }
+
+  .prose ol {
+    @apply list-decimal;
+  }
+
+  .prose li {
+    @apply my-2;
+  }
+
+  .prose blockquote {
+    @apply border-l-4 border-gray-300 pl-4 my-4 italic text-gray-600;
+  }
+
+  .prose code {
+    @apply bg-gray-100 px-1.5 py-0.5 rounded text-sm font-mono;
+  }
+
+  .prose pre {
+    @apply bg-gray-900 text-gray-100 p-4 rounded-lg my-4 overflow-x-auto;
+  }
+
+  .prose pre code {
+    @apply bg-transparent p-0;
+  }
+
+  .prose img {
+    @apply max-w-full h-auto rounded-lg my-6;
+  }
+
+  .prose table {
+    @apply w-full border-collapse my-6;
+  }
+
+  .prose th,
+  .prose td {
+    @apply border border-gray-300 px-4 py-2 text-left;
+  }
+
+  .prose th {
+    @apply bg-gray-100 font-semibold;
+  }
+
+  /* KaTeX formula styles */
+  .prose .katex {
+    @apply text-lg md:text-xl;
+  }
+
+  /* Chemistry formula support with subscripts and superscripts */
+  .prose sub {
+    @apply text-[0.75em] -bottom-[0.25em] relative;
+  }
+
+  .prose sup {
+    @apply text-[0.75em] -top-[0.5em] relative;
+  }
+}
+
+/* Utility classes */
+@layer utilities {
+  /* Container with responsive padding */
+  .container-custom {
+    @apply w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+  }
+
+  /* Visually hidden for screen readers */
+  .sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border-width: 0;
+  }
+}

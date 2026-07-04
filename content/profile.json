@@ -1,0 +1,48 @@
+{
+  "name": "教师姓名",
+  "photo": "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 200'%3E%3Crect fill='%23e5e7eb' width='200' height='200'/%3E%3Ctext fill='%239ca3af' font-family='sans-serif' font-size='14' x='50%25' y='50%25' text-anchor='middle' dy='.3em'%3E教师照片%3C/text%3E%3C/svg%3E",
+  "bio": "高中化学教师，专注化学教育10年，致力于让化学变得简单有趣。",
+  "philosophy": "让化学变得简单有趣，帮助学生理解化学的本质，培养科学思维能力。",
+  "email": "teacher@example.com",
+  "wechatQR": "/images/wechat-qr.png",
+  "wechatId": "teacher_wechat",
+  "education": [
+    {
+      "school": "北京师范大学",
+      "degree": "化学教育硕士",
+      "year": "2014"
+    },
+    {
+      "school": "华东师范大学",
+      "degree": "化学学士",
+      "year": "2012"
+    }
+  ],
+  "experience": [
+    {
+      "period": "2020至今",
+      "school": "某重点高中",
+      "position": "化学教研组长"
+    },
+    {
+      "period": "2016-2020",
+      "school": "某示范高中",
+      "position": "化学教师"
+    },
+    {
+      "period": "2014-2016",
+      "school": "某高级中学",
+      "position": "化学教师"
+    }
+  ],
+  "awards": [
+    "省级优秀教师 (2022)",
+    "市级教学比赛一等奖 (2020)",
+    "全国化学教学设计大赛二等奖 (2019)"
+  ],
+  "socialLinks": [
+    { "name": "微博", "url": "https://weibo.com/" },
+    { "name": "B站", "url": "https://bilibili.com/" },
+    { "name": "抖音", "url": "https://www.douyin.com/" }
+  ]
+}

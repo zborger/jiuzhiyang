@@ -1,0 +1,54 @@
+{
+  "pdfFiles": [
+    {
+      "id": "pdf-001",
+      "title": "高一化学知识点总结",
+      "description": "必修一核心概念汇总，包含原子结构、化学键、氧化还原反应等重点内容",
+      "file": "/files/pdf/chem-basics.pdf",
+      "fileSize": 2097152,
+      "fileType": "application/pdf",
+      "category": "高一化学",
+      "downloadCount": 0,
+      "createdAt": "2024-01-15T10:00:00.000Z",
+      "updatedAt": "2024-01-15T10:00:00.000Z"
+    },
+    {
+      "id": "pdf-002",
+      "title": "化学方程式速查手册",
+      "description": "常见化学方程式汇总，方便学生快速查阅和记忆",
+      "file": "/files/pdf/chem-equations.pdf",
+      "fileSize": 1572864,
+      "fileType": "application/pdf",
+      "category": "通用",
+      "downloadCount": 0,
+      "createdAt": "2024-02-01T10:00:00.000Z",
+      "updatedAt": "2024-02-01T10:00:00.000Z"
+    }
+  ],
+  "pptFiles": [
+    {
+      "id": "ppt-001",
+      "title": "氧化还原反应PPT",
+      "description": "详细讲解氧化还原反应的概念、判断方法和配平技巧",
+      "file": "/files/ppt/redox.pptx",
+      "fileSize": 5242880,
+      "fileType": "application/vnd.ms-powerpoint",
+      "category": "高一化学",
+      "downloadCount": 0,
+      "createdAt": "2024-01-20T10:00:00.000Z",
+      "updatedAt": "2024-01-20T10:00:00.000Z"
+    },
+    {
+      "id": "ppt-002",
+      "title": "有机化学基础PPT",
+      "description": "有机化学入门，介绍烃类、醇类、酸类等有机物的基本概念",
+      "file": "/files/ppt/organic-chemistry.pptx",
+      "fileSize": 6291456,
+      "fileType": "application/vnd.ms-powerpoint",
+      "category": "高二化学",
+      "downloadCount": 0,
+      "createdAt": "2024-02-15T10:00:00.000Z",
+      "updatedAt": "2024-02-15T10:00:00.000Z"
+    }
+  ]
+}
