@@ -37,9 +37,13 @@ export default function Header() {
               <Link
                 key={link.href}
                 href={link.href}
-                className="px-3 py-2 text-sm font-medium text-gray-700 hover:text-blue-600 hover:bg-blue-50 rounded-lg transition-colors min-h-0 min-w-0"
+                className={`px-3 py-2 text-sm font-medium rounded-lg transition-colors min-h-0 min-w-0 ${
+                  link.href === '/ai-tutor'
+                    ? 'bg-gradient-to-r from-blue-600 to-purple-600 text-white hover:from-blue-700 hover:to-purple-700 shadow-sm'
+                    : 'text-gray-700 hover:text-blue-600 hover:bg-blue-50'
+                }`}
               >
-                {link.label}
+                {link.href === '/ai-tutor' ? '🤖 ' + link.label : link.label}
               </Link>
             ))}
           </nav>

@@ -112,6 +112,32 @@ export default async function HomePage() {
         </div>
       </section>
 
+      {/* AI Chemistry Tutor CTA - Prominent Entry */}
+      <section className="bg-gradient-to-r from-blue-600 via-purple-600 to-indigo-700 py-12 md:py-16">
+        <div className="container-custom text-center">
+          <div className="max-w-2xl mx-auto">
+            <div className="text-5xl mb-4">🤖</div>
+            <h2 className="text-2xl md:text-3xl font-bold text-white mb-4">
+              AI 化学助教「小化」
+            </h2>
+            <p className="text-lg text-blue-100 mb-8 leading-relaxed">
+              有化学问题？随时问！基于 AI 大模型，秒级响应高中化学全部知识点
+            </p>
+            <Link
+              href="/ai-tutor"
+              className="inline-flex items-center gap-3 px-8 py-4 bg-white text-blue-700 font-bold text-lg rounded-xl hover:bg-blue-50 transition-all shadow-lg hover:shadow-xl hover:-translate-y-0.5"
+            >
+              <span className="text-2xl">💬</span>
+              开始提问
+              <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
+              </svg>
+            </Link>
+            <p className="mt-4 text-sm text-blue-200">免费使用 · 支持化学公式 · 24小时在线</p>
+          </div>
+        </div>
+      </section>
+
       {/* Teaching Philosophy Section - Requirement 2.2 */}
       <section className="bg-gray-50 py-12 md:py-16">
         <div className="container-custom">
