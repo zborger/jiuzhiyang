@@ -1,7 +1,9 @@
 'use client';
 
 import { useState, useRef, useEffect } from 'react';
-import Link from 'next/link';
+import ReactMarkdown from 'react-markdown';
+import remarkMath from 'remark-math';
+import rehypeKatex from 'rehype-katex';
 
 // DeepSeek API config - MVP: key in frontend (move to Worker for production)
 const API_URL = 'https://api.deepseek.com/chat/completions';
@@ -182,13 +184,23 @@ export default function AiTutorPage() {
         {messages.map((msg, i) => (
           <div key={i} className={`flex ${msg.role === 'user' ? 'justify-end' : 'justify-start'}`}>
             <div
-              className={`max-w-[80%] px-4 py-3 rounded-2xl whitespace-pre-wrap ${
+              className={`max-w-[80%] px-4 py-3 rounded-2xl ${
                 msg.role === 'user'
                   ? 'bg-blue-600 text-white rounded-br-md'
                   : 'bg-white text-gray-800 border border-gray-200 rounded-bl-md shadow-sm'
               }`}
             >
-              {msg.content || (isLoading ? '思考中...' : '')}
+              {msg.role === 'user' ? (
+                <span className="whitespace-pre-wrap">{msg.content}</span>
+              ) : msg.content ? (
+                <div className="prose prose-sm max-w-none prose-p:my-2 prose-ul:my-2 prose-ol:my-2 prose-li:my-1 prose-headings:my-2">
+                  <ReactMarkdown remarkPlugins={[remarkMath]} rehypePlugins={[rehypeKatex]}>
+                    {msg.content}
+                  </ReactMarkdown>
+                </div>
+              ) : (
+                isLoading ? <span>思考中...</span> : null
+              )}
             </div>
           </div>
         ))}
