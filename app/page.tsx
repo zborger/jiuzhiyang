@@ -22,16 +22,16 @@ const courseDirections = [
   },
 ];
 
-// Page metadata - Requirements 9.1, 9.2, 9.3, 9.8
+// Page metadata
 export const metadata: Metadata = {
   title: '首页',
-  description: '专业高中化学教师个人网站，提供高一、高二、高三化学课程资料，分享教学心得与学习资源，助力学生化学学习。',
+  description: '南京九中化学张老师个人网站，提供高一、高二、高三化学课程资料，分享教学心得与学习资源，助力学生化学学习。',
   alternates: {
     canonical: '/',
   },
   openGraph: {
-    title: '化学教师个人网站',
-    description: '专业高中化学教师个人网站，提供高一、高二、高三化学课程资料，分享教学心得与学习资源，助力学生化学学习。',
+    title: '张老师的化学课堂',
+    description: '南京九中化学张老师个人网站，提供高一、高二、高三化学课程资料，分享教学心得与学习资源，助力学生化学学习。',
     url: '/',
     type: 'website',
   },

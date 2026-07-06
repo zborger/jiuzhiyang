@@ -1,12 +1,14 @@
 import type { Metadata } from 'next';
 import './globals.css';
+import Header from './components/Header';
+import Footer from './components/Footer';
 
-// Site configuration for SEO - Requirements 9.1, 9.2, 9.3, 9.8
+// Site configuration for SEO
 const siteConfig = {
-  name: '化学教师个人网站',
-  url: process.env.NEXT_PUBLIC_SITE_URL || 'https://chemistry-teacher.com',
-  description: '专注高中化学教育，分享教学心得与学习资源',
-  keywords: ['化学', '教学', '高中化学', '化学实验', '化学教育', '化学教师'],
+  name: '张老师的化学课堂',
+  url: process.env.NEXT_PUBLIC_SITE_URL || 'https://jiuzhiyang.vercel.app',
+  description: '南京九中化学张老师个人网站，专注高中化学教育，分享教学心得与学习资源',
+  keywords: ['化学', '教学', '高中化学', '南京九中', '化学教育', '化学教师', '张老师'],
   ogImage: '/images/og-default.png',
 };
 
@@ -61,7 +63,11 @@ export default function RootLayout({
 }) {
   return (
     <html lang="zh-CN">
-      <body className="min-h-screen flex flex-col">{children}</body>
+      <body className="min-h-screen flex flex-col">
+        <Header />
+        {children}
+        <Footer />
+      </body>
     </html>
   );
 }
