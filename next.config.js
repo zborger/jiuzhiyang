@@ -1,9 +1,8 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  // Enable static image import
+  output: 'export',
   images: {
-    remotePatterns: [],
-    unoptimized: false,
+    unoptimized: true,
   },
 };
 
