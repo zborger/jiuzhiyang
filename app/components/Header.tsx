@@ -9,6 +9,7 @@ const navLinks = [
   { href: '/courses', label: '课程资源' },
   { href: '/blog', label: '教学博客' },
   { href: '/resources', label: '资料中心' },
+  { href: '/ai-tutor', label: 'AI助教' },
   { href: '/contact', label: '联系方式' },
 ];
 
